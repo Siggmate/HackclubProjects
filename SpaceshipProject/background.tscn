@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://by1ayrgaim8m2"]
+
+[ext_resource type="Texture2D" uid="uid://brqxhbdjtcjhk" path="res://Graphics/Background.png" id="1_d6ct0"]
+
+[node name="Background" type="Sprite2D"]
+texture = ExtResource("1_d6ct0")
+centered = false
+offset = Vector2(0, -820)
