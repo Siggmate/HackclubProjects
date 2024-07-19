@@ -1,13 +1,16 @@
 extends CharacterBody2D
 
 var speed := 150
-var directions := ["left", "right", "up", "down"]
 var acc := 2
 var friction := 5
+@onready var hurtbox: Area2D = $Hurtbox
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready():
+	hurtbox.body_entered.connect(_on_hurtbox_body_entered)
+
 func _process(delta):
 	move()
+
 
 func move():
 	var direction := Input.get_vector("left", "right", "up", "down")
@@ -22,3 +25,6 @@ func accelerate(direct: Vector2):
 	
 func apply_friction():
 	velocity = velocity.move_toward(Vector2.ZERO, friction)
+	
+func _on_hurtbox_body_entered(body):
+	queue_free()
