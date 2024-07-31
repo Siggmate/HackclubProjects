@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfmgyktj6hobb"]
+
+[ext_resource type="Texture2D" uid="uid://do32dxrkf5ubc" path="res://Graphics/Atlas1.png" id="1_hslqp"]
+[ext_resource type="Script" path="res://Scritps/Food.gd" id="2_p4s80"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av6yy"]
+atlas = ExtResource("1_hslqp")
+region = Rect2(32, 0, 16, 16)
+
+[node name="DrumstickRaw" type="Sprite2D"]
+texture = SubResource("AtlasTexture_av6yy")
+script = ExtResource("2_p4s80")
+nutrition = null
+foodType = 2
+foodQuality = null
+count = null
+weight = null
